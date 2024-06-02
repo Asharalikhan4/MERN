@@ -1,5 +1,8 @@
 {
-    "watch": "/",
-    "ext": "ts, js",
-    "exec": "npx tsc && node --env-file=.env dist/index.js"
+    "watch": ["src"],
+    "ext": ".ts",
+    "ignore": ["src/**/*.spec.ts"],
+    "execMap": {
+      "ts": "node --loader=ts-node/esm"
+    }
 }
